@@ -84,7 +84,6 @@ if resp4:
 
 # Resultado final
 if st.button("✨ Ver mi perfil ✨"):
-    # Validación: que haya respondido todas
     respuestas_completas = all([resp1, resp2, resp3, resp4])
     if not respuestas_completas:
         st.warning("Por favor, respondé todas las preguntas antes de ver el perfil.")
@@ -93,27 +92,34 @@ if st.button("✨ Ver mi perfil ✨"):
         st.success(f"🎉 Tu perfil es: **{perfil}**")
 
         if perfil == "Innovador":
-            st.info("""🌟 **Innovador**
+            st.info("""
+🌟 Innovador
 - Creativo/a, curioso/a, buscás soluciones originales.
 - Preferís probar ideas nuevas antes que seguir caminos tradicionales.
 - 💪 Fortaleza: generás alternativas únicas y aportás frescura en los equipos.
-- ⚠️ Riesgo: podés perder tiempo en experimentos poco prácticos si no medís impacto.""")
+- ⚠️ Riesgo: podés perder tiempo en experimentos poco prácticos si no medís impacto.
+""")
         elif perfil == "Estratégico":
-            st.warning("""📊 **Estratégico**
+            st.warning("""
+📊 Estratégico
 - Analítico/a, planificador/a, orientado/a al largo plazo.
 - Evaluás riesgos y beneficios antes de actuar.
 - 💪 Fortaleza: anticipás problemas y organizás recursos con eficiencia.
-- ⚠️ Riesgo: podés demorarte demasiado en decidir o ser percibido como excesivamente cauteloso.""")
+- ⚠️ Riesgo: podés demorarte demasiado en decidir o ser percibido como excesivamente cauteloso.
+""")
         elif perfil == "Colaborativo":
-            st.success("""🤝 **Colaborativo**
+            st.success("""
+🤝 Colaborativo
 - Empático/a, comunicador/a, valorás el trabajo en equipo.
 - Buscás apoyo, consultás y construís consensos con otros.
 - 💪 Fortaleza: favorecés la cohesión grupal y potenciás la inteligencia colectiva.
-- ⚠️ Riesgo: podés depender demasiado de la opinión ajena y perder autonomía.""")
+- ⚠️ Riesgo: podés depender demasiado de la opinión ajena y perder autonomía.
+""")
         elif perfil == "Audaz":
-            st.error("""⚡ **Audaz**
+            st.error("""
+⚡ Audaz
 - Valiente, adaptable, tomás riesgos con confianza.
 - Preferís actuar rápido y enfrentar lo desconocido.
 - 💪 Fortaleza: inspirás dinamismo y capacidad de reacción en situaciones críticas.
-- ⚠️ Riesgo: podés subestimar peligros y cometer errores por exceso de impulso.""")
-a.")
+- ⚠️ Riesgo: podés subestimar peligros y cometer errores por exceso de impulso.
+""")
