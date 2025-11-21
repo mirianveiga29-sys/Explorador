@@ -82,9 +82,26 @@ if resp4:
     }
     puntajes[asignacion4[resp4]] += 1
 
+# Pregunta 5: El refugio destruido
+opciones5 = [
+    "Improvisás un nuevo refugio con materiales disponibles",
+    "Retrocedés y planificás otra ruta segura",
+    "Te unís a otros exploradores para reconstruirlo juntos",
+    "Te quedás igual, enfrentando la noche sin refugio",
+]
+resp5 = st.radio("5️⃣ El refugio destruido: Llegás a tu destino, pero el refugio está destruido. ¿Qué hacés?", opciones5, index=None)
+if resp5:
+    asignacion5 = {
+        opciones5[0]: "Innovador",
+        opciones5[1]: "Estratégico",
+        opciones5[2]: "Colaborativo",
+        opciones5[3]: "Audaz",
+    }
+    puntajes[asignacion5[resp5]] += 1
+
 # Resultado final
 if st.button("✨ Ver mi perfil ✨"):
-    respuestas_completas = all([resp1, resp2, resp3, resp4])
+    respuestas_completas = all([resp1, resp2, resp3, resp4, resp5])
     if not respuestas_completas:
         st.warning("Por favor, respondé todas las preguntas antes de ver el perfil.")
     else:
@@ -105,21 +122,4 @@ if st.button("✨ Ver mi perfil ✨"):
 - Analítico/a, planificador/a, orientado/a al largo plazo.
 - Evaluás riesgos y beneficios antes de actuar.
 - 💪 Fortaleza: anticipás problemas y organizás recursos con eficiencia.
-- ⚠️ Riesgo: podés demorarte demasiado en decidir o ser percibido como excesivamente cauteloso.
-""")
-        elif perfil == "Colaborativo":
-            st.success("""
-🤝 Colaborativo
-- Empático/a, comunicador/a, valorás el trabajo en equipo.
-- Buscás apoyo, consultás y construís consensos con otros.
-- 💪 Fortaleza: favorecés la cohesión grupal y potenciás la inteligencia colectiva.
-- ⚠️ Riesgo: podés depender demasiado de la opinión ajena y perder autonomía.
-""")
-        elif perfil == "Audaz":
-            st.error("""
-⚡ Audaz
-- Valiente, adaptable, tomás riesgos con confianza.
-- Preferís actuar rápido y enfrentar lo desconocido.
-- 💪 Fortaleza: inspirás dinamismo y capacidad de reacción en situaciones críticas.
-- ⚠️ Riesgo: podés subestimar peligros y cometer errores por exceso de impulso.
-""")
+- ⚠️ Riesgo: podés demorarte demasiado en decidir o ser
